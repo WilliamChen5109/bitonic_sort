@@ -49,8 +49,6 @@ CUDA 版本把一个完整的排序网络映射到单个 thread block：每个�
 
 CMake 默认检测 CUDA 编译器；未检测到时只生成 CPU 目标，检测到但工具链配置损坏时仍可能报错，可修复工具链或关闭 CUDA 构建。
 
-当前验证环境无法访问 GPU，CUDA 程序运行时报驱动错误，因此 GPU 上的排序结果尚未验证。
-
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --parallel
